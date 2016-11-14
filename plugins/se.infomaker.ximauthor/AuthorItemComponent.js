@@ -198,7 +198,7 @@ class AuthorItemComponent extends Component {
                 .append(deleteButton))
     }
 
-    toggleTooltip(ev) {
+    toggleTooltip() {
         // $(ev.target).tooltip('toggle')
         //
         // ev.target.timeout = window.setTimeout(function () {
@@ -206,7 +206,7 @@ class AuthorItemComponent extends Component {
         // }.bind(this), 3000)
     }
 
-    hideTooltip(ev) {
+    hideTooltip() {
         // if (ev.target.timeout) {
         //     window.clearTimeout(ev.target.timeout)
         //     ev.target.timeout = undefined

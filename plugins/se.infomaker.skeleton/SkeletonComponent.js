@@ -9,13 +9,11 @@ class Test extends Component {
 
     render($$) {
         return $$('div').css('padding', '1rem 2rem').css('height', '200px').append("HELLO WORLD").on('click', () => {
-            console.log("Click");
             this.send('close')
         })
     }
 
-    onClose(action) {
-        console.log("Close");
+    onClose(action) { // eslint-disable-line no-unused-vars
         return true
     }
 }
@@ -27,7 +25,6 @@ class SkeletonComponent extends Component {
      */
     dispose() {
         // Perfect place to remove eventlisteners etc
-        console.log("Dispose");
     }
 
     /**
@@ -76,25 +73,12 @@ class SkeletonComponent extends Component {
         const third = [{
             caption: "Third",
             callback: () => {
-                console.log("called")
                 return true;
             }
         }]
 
         let openDialog = $$('button').on('click', () => {
 
-            const messages = [
-                {
-                    type: "info",
-                    message: "Hello info message"
-                },
-                {
-                    type: "warning",
-                    message: "Hello warning message"
-                }
-            ]
-
-            // api.ui.showMessageDialog(messages, () => {}, () => {})
             api.ui.showDialog(Test, {}, {primary:"Go", secondary: "Cancel", tertiary: third})
         }).append('Open dialog')
 

@@ -67,7 +67,7 @@ class AuthorInfoComponent extends Component {
         return match ? match : undefined;
     }
 
-    onClose(status) {
+    onClose() {
       // TODO: What to do?
     }
 }

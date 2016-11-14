@@ -47,7 +47,6 @@ class XimimageCommand extends Command {
 
 
     handleFile(file) {
-        console.log("Handle file", file);
         this.createPreviewNode(file)
         // this.context.api.uploadFile(file,
         //     {
@@ -115,9 +114,6 @@ class XimimageCommand extends Command {
         api.document.insertBlockNode(data.type, data);
 
         api.editorSession.fileManager.sync()
-            .then((data) => {
-                console.log("Data", data);
-            })
 
         return data.id;
     }
