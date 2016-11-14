@@ -99,7 +99,10 @@ class ImageDisplay extends Component {
 
     _openMetaData() {
         this.setState({
-            DialogClass: ImageMetadata
+            DialogClass: ImageMetadata,
+            url: this.props.node.url,
+            newsitem: this.props.node.document,
+            bylinesearch: this.props.node.bylinesearch
         })
     }
 
